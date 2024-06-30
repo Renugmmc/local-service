@@ -1,0 +1,263 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>
+            Local service directory
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PT Sans', sans-serif;
+        }
+
+        .service_heading {
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .service_heading:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0%;
+            height: auto;
+            border-bottom: 3px solid #3e4555;
+            transition: all 0.3s linear;
+        }
+
+        .service_heading:hover:after {
+            width: 20%
+        }
+
+        .service {
+            color: #8d97ad;
+            font-weight: 300;
+        }
+
+        .service h1,
+        .service h2,
+        .service h3,
+        .service h4,
+        .service h5,
+        .service h6 {
+            color: #3e4555;
+        }
+
+        .service h6 {
+            line-height: 22px;
+            font-size: 18px;
+            color: #8d97ad;
+        }
+
+        .service .font-weight-medium {
+            font-weight: 500;
+            color: #3e4555;
+        }
+
+        .service .badge {
+            line-height: 15px;
+        }
+
+        .service .badge-info {
+            background: #188ef4;
+        }
+
+        .service .subtitle {
+            color: #8d97ad;
+            line-height: 24px;
+        }
+
+        .service .img-shadow {
+            box-shadow: 0 0 30px rgba(115, 128, 157, 0.3);
+        }
+
+        .service .wrap-service .img-hover {
+            transition: all 0.2s ease-in;
+        }
+
+        .service .wrap-service .img-hover:hover {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        .service .wrap-service .uneven-box {
+            margin-top: 100px;
+        }
+
+        .service .btn-sm {
+            padding: 6px 14px;
+            font-size: 16px;
+            background: #188ef4;
+        }
+
+        .service .btn-sm:hover {
+            color: #188ef4;
+            background: #fff;
+            border: 1px solid #188ef4;
+        }
+        .local{
+        background-color: rgb(63, 63, 63);
+         color: white;
+        padding: 0.5rem;
+ 
+}
+
+        @media(max-width:768px) {
+            .service .wrap-service .uneven-box {
+                margin-top: 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    {% include "include/navbar.html" %}
+    <div class="service py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-12 mx-auto">
+                    <div class="mt-2 mb-4 text-center">
+                        <h1 class="service_heading">OUR SERVICES</h1>
+                    </div>
+                    <div class="row ">
+                        <!-- -----left side data----- -->
+                        <div class="col-md-6 mt-md-2 m-0" style="text-align: justify; ">
+                            <span class="bg-info badge rounded-pill px-3 py-1 my-2 font-weight-light">
+                                What we do
+                            </span>
+                            <h4 class="font-weight: bolder;">Awesome with Extra Ordinary Flexibility Features</h4>
+                            <h6 class="font-weight-light subtitle">You can relay on our amazing features list and also
+                                our customer services will be great
+                                experience for you wiithout doubt and in no-time.</h6>
+                            <div class="row gx-5">
+                                <div class="col-md-6 mt-3">
+                                    <h5 class="font-weight-medium" style="text-align: justify; font-weight: bolder;">
+                                        Plumber</h5>
+                                    <p>A Plumbers is a professional responsible for installing, repairing, and
+                                        maintaining pipes in commercial structures like apartment buildings or
+                                        residential homes. They collaborate with other construction professionals such
+                                        as general contractors to ensure everything goes according to plan during
+                                        renovations or new builds.
+                                    </p>
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <h5 class="font-weight-medium" style="text-align: justify; font-weight: bolder;">
+                                        Electrician</h5>
+                                    <p>Electricians prepare, assemble, install, test, troubleshoot and repair electrical
+                                        wiring, fixtures, control devices and related equipment in all types of
+                                        buildings and other structures. They are employed by electrical contractors and
+                                        building maintenance departments, or they may be self-employed.
+                                    </p>
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <h5 class="font-weight-medium" style="text-align: justify; font-weight: bolder;">
+                                        Tutors</h5>
+                                    <p>A tutor, formally also called an academic tutor, is a person who provides
+                                        assistance or tutelage to one or more people on certain subject areas or skills.
+                                        The tutor spends a few hours on a daily, weekly, or monthly basis to transfer
+                                        their expertise on the topic or skill to the student (also called a tutee).
+                                    </p>
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <h5 class="font-weight-medium" style="text-align: justify; font-weight: bolder;">
+                                        Cleaners</h5>
+                                    <p>Cleaners sometimes repair things, and maintain their equipment in good working
+                                        order, as well as dusting, washing, waxing and polishing. Heavy duty cleaners
+                                        often move furniture, large containers of recycled materials and waste, and
+                                        other objects, and operate large buffers and other weighty equipment.
+                                    </p>
+                                </div>
+                                <div class="col-lg-12 my-4">
+                                    <a href="#" class="btn btn-sm  btn-info">Check more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-md-2 m-0">
+                            <div class="row wrap-service">
+                                <!-- --left side images-- -->
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-12 img-hover mb-4">
+                                            <img src="{% static './home/img/electrician.jpg' %}" class="rounded img-shadow img-fluid "
+                                                alt="ux">
+                                        </div>
+                                        <div class="col-md-12 img-hover mb-4">
+                                            <img src="{%static './home/img/plumber.jpg'%}" class="rounded img-shadow img-fluid " alt="ux">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- --right side images-- -->
+                                <div class="col-md-6 uneven-box">
+
+                                    <div class="row">
+                                        <div class="col-md-12 img-hover mb-4">
+                                            <img src="{%static './home/img/cleaner.jpg'%} " class="rounded img-shadow img-fluid "
+                                                alt="ux">
+                                        </div>
+                                        <div class="col-md-12 img-hover mb-4">
+                                            <img src="{%static './home/img/tutors.jpg'%}" class="rounded img-shadow img-fluid " alt="ux">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- ----right side data--- -->
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    
+    {% include "include/footer.html" %}
+      <!-- Copyright Start -->
+     <div class="container-fluid copyright bg-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <a href="#" class="text-warning mb-0 display-6 text-decoration-none">LS<span class="text-white text-decoration-none">D</span><i class="fa fa-spider text-warning ms-2"></i></a>
+                </div>
+                <div class="col-md-4 copyright-btn text-center text-md-start mb-3 mb-md-0 flex-shrink-0">
+                    <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-md-4 my-auto text-center text-md-end text-white">
+                    
+                    Designed By Renu-Susmita-Bipana 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

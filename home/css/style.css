@@ -1,0 +1,37 @@
+.btn.white-btn{
+    background: rgba(255, 255, 255, 0.7);
+}
+.btn.btn.white-btn:hover{
+    background: rgba(255, 255, 255, 0.5);
+}
+.nav-menu-btn{
+    display: none;
+}
+.form-box{
+ position: relative;
+ display: flex;
+align-items: center;
+width: 512px;
+height: 420px;
+overflow: hidden;
+z-index: 2;
+
+}
+.register-container{
+width:500px;
+display: flex;
+flex-direction: column;
+transition: 5x ease-in-out;
+}
+
+.top span{
+ color: white;
+font-size: small;
+padding:10px 0;
+}
+.top span a{
+    font-weight: 500;
+    color: white;
+    margin-left: 5px;
+   
+}

@@ -1,0 +1,469 @@
+{% load static %}
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        
+
+        <title>Title</title>
+    <style>
+
+
+      .text-center .logo img{
+      height: 70px;
+      border-radius: 100%;
+     
+      }
+      .text-center .logo {
+        display: flex;
+      }
+        .carousel-item img {
+            height: calc(100vh - 120px);
+            object-fit: cover;
+          
+        }
+
+        .collapse .test a:hover{
+          background-color: white;
+          color: black;
+          transition: 0.5s ease-in;
+          transform: translate(0,-5px);
+        }
+
+        .courses-and-training-section {
+  /* border: solid rgb(0, 90, 128); */
+  width: 100%;
+
+}
+
+.courses-and-training-section h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: rgb(33, 30, 30);
+}
+
+
+
+.courses-and-training-section .courses-and-training-card-div {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  /* border:solid violet; */
+  margin: auto;
+  justify-content: space-evenly;
+  gap: 1.5rem ;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.courses-and-training-card-div .card {
+  /* height: fit-content; */
+  /* min-width: 24%; */
+  flex: 1 1 300px;
+  padding: 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgb(42, 42, 44);
+  color: white;
+  
+
+}
+
+.local{
+  background-color: rgb(63, 63, 63);
+  color: white;
+  padding: 0.5rem;
+ 
+}
+
+.courses-and-training-card-div .card:hover {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  transition: 0.1s ease-out;
+}
+
+.courses-and-training-card-div .card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.courses-and-training-card-div .card h2,
+p {
+  text-align: center;
+  padding-top: 1rem;
+}
+h2 {
+  font-weight: 100;
+  /* font-size: 1rem; */
+}
+#milestone {
+    background: linear-gradient(rgba(49, 44, 43, 0.85), rgba(44, 41, 41, 0.85)), url('../static/home/img/local.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+}
+
+#milestone h1,
+#milestone p {
+    color: #fff;
+}
+
+.team-member {
+  text-align:center;
+}
+
+.team-member .image{
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+.team-member .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: -10%;
+    background-color: rgba(87, 82, 81, 0.7);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.team-member h5 {
+    margin-top: 16px;
+    margin-bottom: 4px;
+}
+
+.team-member .social-icons {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.team-member .social-icons a {
+    width: 40px;
+    height: 40px;
+}
+
+.team-member:hover .social-icons {
+    top: 50%;
+    opacity: 1;
+}
+
+.team-member:hover .overlay {
+    top: 0%;
+    opacity: 1;
+}
+
+#reviews {
+background-size:cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.review {
+text-align: center;
+z-index: 2;
+position: relative;
+margin: 15px;
+max-width: 768px;
+margin: auto;
+}
+
+.review .bxs-quote-alt-left {
+font-size: 120px;
+position: absolute;
+opacity: 0.1;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+color:white;
+}
+
+.review img {
+width: 80px;
+height: 80px;
+border-radius: 100px;
+margin: auto;
+}
+
+.review h5 {
+margin-top: 16px;
+margin-bottom: 4px;
+color: white;
+}
+
+.review h3 {
+margin-top: 26px;
+margin-bottom: 26px;
+font-size: 22px;
+color: white;
+font-weight: 400;
+line-height: 1.7;
+}
+
+.review small {
+color: rgb(56, 53, 53);
+}
+
+.review .stars {
+color:rgb(48, 46, 46);
+}
+ 
+.blog-post {
+  position: relative;
+  background-color: white;
+  box-shadow:rgb(63, 62, 62);
+}
+
+.blog-post .content {
+    padding: 32px;
+}
+
+.blog-post a {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgb(54, 52, 52);
+    padding: 2px 12px;
+    border-radius: 100px;
+text-decoration: none;
+color: white;
+}
+
+.blog-post h5 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.blog-post small {
+    text-transform: uppercase;
+    color:gray;
+    text-decoration: underline;
+}
+
+.intro h1 {
+    text-align: center;
+}
+
+
+
+    </style>
+    <script src="https://kit.fontawesome.com/5a37ddd603.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="text-center">
+    <div class="logo d-inline-block">
+   
+        <img src="{% static './home/img/logo.png'  %}" alt="">
+      </div>
+      
+        <h1 class="d-inline-block"><em>LOCAL SERVICE DIRECTORY</em></h1>
+        <p> <em>"Your satisfaction is our mission"</em> </p>  
+    </header>
+    {% include "include/navbar.html" %}
+    
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+              
+                <img src="{% static './home/img/local.jpg' %}"class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static './home/img/blub.jpg' %}" class="d-block w-100"
+                    alt="...">
+            </div>
+            <!-- <div class="carousel-item">
+                <img src="./img/ss.jpg" class="d-block w-100"
+                 alt="...">
+            </div>  -->
+            <div class="carousel-item">
+                <img src="{% static './home/img/tutor.jpg' %}" class="d-block w-100"
+                 alt="...">
+            </div> 
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+          <section class="courses-and-training-section">
+            <div class="courses-and-training-div ">
+               <h1 class="py-3">Our Services</h1>
+               <div class="courses-and-training-card-div">
+                  <div class="card card1">
+                     <img src="{% static './home/img/plumber.jpg' %}" alt="">
+                     <div class="card_description " >
+                        <h2>Plumber</h2>
+                        <p style="text-align: justify;">A Plumbers is a professional responsible for installing, repairing, and
+                          maintaining pipes in commercial structures like apartment buildings or
+                          residential homes</p>
+                        
+                     </div>
+                  </div>
+                  <div class="card card2">
+                     <img src="{% static './home/img/electrician.jpg' %}" alt="">
+                     <div class="card_description">
+                        <h2>Electrician</h2>
+                        <p style="text-align: justify;">Electricians prepare, assemble, install, test, troubleshoot and repair electrical
+                          wiring, fixtures, control devices and related equipment in all types of
+                          buildings and other structures. </p>
+                  
+                     </div>
+                  </div>
+                  <div class="card card3">
+                     <img src="{% static './home/img/cleaner.jpg' %}" alt="">
+                     <div class="card_description">
+                        <h2>Cleaner</h2>
+                        <p style="text-align: justify;">Cleaners sometimes repair things, and maintain their equipment in good working
+                          order, as well as dusting, washing, waxing and polishing</p>
+                         
+                     </div>
+                  </div>
+                  <div class="card card4">
+                     <img src="{% static './home/img/tutors.jpg' %}" alt="">
+                     <div class="card_description">
+                        <h2>Tutors</h2>
+                        <p style="text-align: justify;">A tutor, formally also called academic tutor, is a person who provides
+                          assistance or tutelage to one or more people on certain subject areas or skills.</p>
+                         
+                     </div>
+                    </div>
+                  
+                    <button type="button" class="btn btn-dark "><a href="{% url 'service' %}">View More</a></button>
+             
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- milestone -->
+         <section id="milestone">
+            <div class="container py-5">
+                <div class="row text-center justify-content-center gy-4">
+                    <div class="col-lg-2 col-sm-6">
+                        <h1 class="display-4">90K+</h1>
+                        <p class="mb-0">Happy Clients</p>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <h1 class="display-4">45M</h1>
+                        <p class="mb-0">Lines of code</p>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <h1 class="display-4">190</h1>
+                        <p class="mb-0">Total Downloads</p>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <h1 class="display-4">380K</h1>
+                        <p class="mb-0">YouTube Subscribers</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- review -->
+     
+        <!-- blog -->
+        <section id="blog">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="intro">
+                      
+                            <h1>Blog Posts</h1>
+                            <p class="mx-auto"><i>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                                roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old</i></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <article class="blog-post">
+                            <img src="{% static './home/img/blub.jpg' %}" class="d-block w-100"
+                            alt="...">
+                            <a href="#" class="tag">Web Design</a>
+                            <div class="content">
+                                <small>01 Dec, 2022</small>
+                                <h5>Web Design trends in 2022</h5>
+                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                                    piece of classical Latin literature from</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="blog-post">
+                            <img src="{% static './home/img/blub.jpg' %}" class="d-block w-100"
+                            alt="...">
+                            <a href="#" class="tag">Programming</a>
+                            <div class="content">
+                                <small>01 Dec, 2022</small>
+                                <h5>Web Design trends in 2022</h5>
+                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                                    piece of classical Latin literature from</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="blog-post">
+                            <img src="{% static './home/img/blub.jpg' %}" class="d-block w-100"
+                            alt="...">
+                            <a href="#" class="tag">Marketing</a>
+                            <div class="content">
+                                <small>01 Dec, 2022</small>
+                                <h5>Web Design trends in 2022</h5>
+                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                                    piece of classical Latin literature from</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    {% include "include/footer.html" %}
+    <!-- Footer -->
+     <!-- Copyright Start -->
+     <div class="container-fluid copyright bg-dark py-4">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                  <a href="#" class="text-warning mb-0 display-6 text-decoration-none ">LS<span class="text-white text-decoration-none">D</span><i class="fa fa-spider text-warning ms-2"></i></a>
+              </div>
+              <div class="col-md-4 copyright-btn text-center text-md-start mb-3 mb-md-0 flex-shrink-0">
+                  <a class="btn btn-primary rounded-circle me-3 copyright-icon my-2" href="" ><i class="fab fa-twitter"></i></a>
+                  <a class="btn btn-primary rounded-circle me-3 copyright-icon my-2" href="https://www.facebook.com/profile.php?id=100070915548845"><i class="fab fa-facebook-f"></i></a>
+                  <a class="btn btn-primary rounded-circle me-3 copyright-icon my-2" href=""><i class="fab fa-youtube"></i></a>
+                  <a class="btn btn-primary rounded-circle me-3 copyright-icon my-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                  <a class="btn btn-primary rounded-circle me-3 copyright-icon my-2" href=""><i class="fab fa-instagram"></i></a>
+              </div>
+              <div class="col-md-4 my-auto text-center text-md-end text-white">
+                  
+                  Designed By Renu-Susmita-Bipana 
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Copyright End -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+        <script src="../js/index.js"></script>
+</body>
+
+</html>

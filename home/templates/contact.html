@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    
+    <title>Title</title>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    body{
+      font-family: "Roboto", sans-serif;
+        background-color:white;
+        color: #fff;
+    }
+    .heading{
+        text-align: center;
+        font-size: 45px;
+        border-bottom: 1px dotted#050000;
+    }
+    /* .container{
+        background-color: #82b0b9;
+    } */
+
+     
+    .btn-info{
+        width: 50%;
+        letter-spacing: 2px;
+        background: transparent;
+        transition: all 0.5s ease-in-out;
+    }
+    .icn{
+        font-family: monospace;
+        font-size: 17px;
+    }
+    .hr{
+        width: 80%;
+    }
+    ul list-unstyled{
+        color: #fff;
+        float:left;
+        font-family: monospace;
+        font-size: 22px;
+        margin-left: 23px;
+        margin-right: 10px;
+        transition: 0.5s ease-in-out;
+    }
+    ul li a:hover{
+        color: #5d21c5;
+    }
+
+    .local{
+        background-color: rgb(63, 63, 63);
+         color: white;
+        padding: 0.5rem;
+ 
+}
+    </style>
+    </head>
+<div>
+  {% include "include/navbar.html" %}
+    <div class=" text-dark container">
+        <h2 class="heading">Contact Us</h2>
+        <h2 style="text-align: center;">We'd Love to Help!</h2>
+        <p style="text-align: center;">We Like to Create things with fun, open-minded pepople.Feel free to say hello! </p>
+    <br>
+    <div class="row">
+    <div class="col-md-6">
+        <form>
+        <input type="text" name="text" required="" placeholder="Your Name" class="form-control">
+        <br>
+        <input type="Email" name="Email" required="" placeholder="Your Email" class="form-control">
+        <br>
+        <textarea rows="6"  placeholder="Message" required="" class="form-control"></textarea>
+        <br>
+        <div class="text-center">
+            <button class="btn btn-info">Submit</button>
+        </div>
+        <br><br><br><br>
+        </form>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <p class="icn"><i class="fa fa-map-marker"></i>&nbsp;&nbsp; Pokhara,Nepal</p>
+        <p class="icn"><i class="fa fa-phone"></i>&nbsp;&nbsp; +061-567843</p>
+        <p class="icn"><i class="fa fa-mobile"></i>&nbsp;&nbsp; 9876543210</p>
+        <p class="icn"><i class="fa fa-envelope"></i>&nbsp;&nbsp; localservice@gmail.com</p>
+        <hr>
+        <div class="media">
+            <ul class="list-unstyled">
+                <li><a href="#" class="text-decoration-none"><i class="fab fa-facebook-f"></i>&nbsp;&nbsp; facebook</a></li>
+                <li><a href="#" class="text-decoration-none"><i class="fab fa-twitter"></i>&nbsp;&nbsp; twitter</a></li>
+                <li><a href="#" class="text-decoration-none"><i class="fab fa-instagram"></i>&nbsp;&nbsp; instagram</a></li>
+                <li><a href="#" class="text-decoration-none"><i class="fab fa-google-plus-g">&nbsp;&nbsp; google-plus-g</i></a></li>
+                <li><a href="#" class="text-decoration-none"><i class="fab fa-youtube"></i>&nbsp;&nbsp; youtube</a></li>
+            </ul>
+        </div>
+        <br><br>
+        
+    </div>
+    </div>
+    </div>
+</div>
+
+{% include "include/footer.html" %}
+  <!-- Copyright Start -->
+  <div class="container-fluid copyright bg-dark py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                <a href="#" class="text-warning mb-0 display-6 text-decoration-none">LS<span class="text-white text-decoration-none">D</span><i class="fa fa-spider text-warning ms-2"></i></a>
+            </div>
+            <div class="col-md-4 copyright-btn text-center text-md-start mb-3 mb-md-0 flex-shrink-0">
+                <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="col-md-4 my-auto text-center text-md-end text-white">
+                
+                Designed By Renu-Susmita-Bipana 
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

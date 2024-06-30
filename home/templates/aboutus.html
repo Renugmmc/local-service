@@ -1,0 +1,172 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <title>Title</title>
+    <style>
+        body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+
+  .header{
+    text-align: center;
+    padding: 1rem;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+
+  
+  }
+  .wrap-service .card:hover {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  transition: 0.1s ease-out;
+}
+  
+  
+  .about-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #222327;
+    color: white;
+  text-align: justify;
+   
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .courses-and-training-card-div .card:hover {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  transition: 0.1s ease-in;
+}
+ 
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+
+  .local{
+        background-color: rgb(63, 63, 63);
+         color: white;
+        padding: 0.5rem;
+ 
+}
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  .content{
+    background-size: cover;
+  }
+    </style>
+</head>
+<body>
+  {% include "include/navbar.html" %}
+    <div class="about-section">
+        <div class="header">
+        <h1>About Us </h1>
+    </div>
+        <p>Our mission is to connect the community with reliable local services. We strive to provide accurate and
+            up-to-date information to help you find the best services available in your area.Our team is comprised of dedicated professionals with a passion for helping others. We work tirelessly to
+            ensure that our directory is comprehensive, user-friendly, and reliable.</p>
+            
+    </div>
+<div class="header">
+
+  <h2 style="text-align:center ">Our Team</h2>
+</div>
+    <div class="row wrap-service">
+        <div class="column">
+            <div class="card">
+                <img src="{% static './home/img/teamleader.jpg' %}" alt="Jane" style="width:100%">
+                <div class="container">
+                    <h2>Renu shrestha</h2>
+                    <p class="title">Team leader</p>
+                    <p>She is a team leader who gives motivation to their team members.</p>
+                    <p>renustha.xdezo@gmail.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="{% static './home/img/bteammember.jpg' %}" alt="bipana" style="width:100%">
+                <div class="container">
+                    <h2> Bipana Baral</h2>
+                    <p class="title">Team Member</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.jgkjgdkjgkjsg</p>
+                    <p>bipanabaral.xdezo@gmail.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="{% static './home/img/steammember.jpg' %}" alt="John" style="width:100%">
+                <div class="container">
+                    <h2>Susmita Shrestha</h2>
+                    <p class="title">Team member</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>susmitastha.xdezo@gmail.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "include/footer.html" %}
+  <!-- Copyright End -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
