@@ -14,6 +14,15 @@
       crossorigin="anonymous"
     />
 
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  
+
     <title>Title</title>
     <style>
       .text-center .logo img {
@@ -23,6 +32,38 @@
       .text-center .logo {
         display: flex;
       }
+
+      .slider {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .prev, .next {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
       .carousel-item img {
         height: calc(100vh - 120px);
         object-fit: cover;
@@ -45,6 +86,8 @@
         text-align: center;
         color: rgb(33, 30, 30);
       }
+
+ 
 
       .courses-and-training-section .courses-and-training-card-div {
         display: flex;
@@ -450,59 +493,112 @@
           </p>
           <button>Read our success stories</button>
         </div>
-        <div class="container__right">
-          <div class="card7">
-            <img
-              src="{% static './home/img/pic-1.jpg' %}"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="card__content">
-              <span><i class="ri-double-quotes-l"></i></span>
-              <div class="card__details">
-                <p>
-                  We had a great time collaboraring with the Filament team. They
-                  have my high recommendation!
-                </p>
-                <h4>- Marnus Stephen</h4>
+
+        <!-- Slider main container -->
+        <div class="slider container__right">
+          <div class="slides">
+              <div class="slide">
+                <div class="card7">
+                  <img
+                    src="{% static './home/img/pic-1.jpg' %}"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div class="card__content">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <div class="card__details">
+                      <p>
+                        We had a great time collaboraring with the Filament team. They
+                        have my high recommendation!
+                      </p>
+                      <h4>- Marnus Stephen</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="slide">
+                 <div class="card7">
+                <img
+                  src="{% static './home/img/pic-2.jpeg' %}"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      The team drastically improved our product's user experience &
+                      increased our business outreach.
+                    </p>
+                    <h4>- Andrew Jettpace</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide"> 
+                <div class="card7">
+                <img
+                  src="{% static './home/img/pic-3.jpg' %}"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      I absolutely loved working with the Filament team. Complete
+                      experts at what they do!
+                    </p>
+                    <h4>- Stacy Stone</h4>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="card7">
-            <img
-              src="{% static './home/img/pic-2.jpeg' %}"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="card__content">
-              <span><i class="ri-double-quotes-l"></i></span>
-              <div class="card__details">
-                <p>
-                  The team drastically improved our product's user experience &
-                  increased our business outreach.
-                </p>
-                <h4>- Andrew Jettpace</h4>
-              </div>
-            </div>
+          <div class="nav">
+              <button class="prev">&lt;</button>
+              <button class="next">&gt;</button>
           </div>
-          <div class="card7">
-            <img
-              src="{% static './home/img/pic-3.jpg' %}"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="card__content">
-              <span><i class="ri-double-quotes-l"></i></span>
-              <div class="card__details">
-                <p>
-                  I absolutely loved working with the Filament team. Complete
-                  experts at what they do!
-                </p>
-                <h4>- Stacy Stone</h4>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+  
+      <script>
+          const slides = document.querySelector('.slides');
+          const slide = document.querySelectorAll('.slide');
+          const prevBtn = document.querySelector('.prev');
+          const nextBtn = document.querySelector('.next');
+          let currentIndex = 0;
+  
+          function showSlide(index) {
+              const totalSlides = slide.length;
+
+              
+              if (index === totalSlides-2) {
+                  currentIndex = 0;
+              } else if (index < 0) {
+                  currentIndex = totalSlides;
+              } else {
+                  currentIndex = index;
+              }
+              slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+          }
+  
+          prevBtn.addEventListener('click', () => {
+            if(currentIndex === 0){
+              showSlide(2)
+            }else{
+
+              showSlide(currentIndex - 1);
+
+            }
+          });
+  
+          nextBtn.addEventListener('click', () => {
+              showSlide(currentIndex + 1);
+          });
+  
+          showSlide(currentIndex);
+      </script>
+       
       </div>
     </section>
   
@@ -562,9 +658,45 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
-    {% comment %} <script src="{%static "./home/js/script.js"%}"></script> {% endcomment %}
+    <script src="https://temp.staticsave.com/66954130320ea.css"></script> 
+
     <script>
-      // script.js
+      const serviceLink = document.getElementById("serviceId");
+const homeLink = document.getElementById("homeId");
+const aboutLink = document.getElementById("aboutId");
+const contactLink = document.getElementById("contactId");
+const bookLink = document.getElementById("bookId");
+const registerLink = document.getElementById("registerId");
+
+console.log(serviceLink);
+
+if (window.location.pathname === "/") {
+  homeLink.style.color = "red";
+}
+if (window.location.pathname === "/service/") {
+  serviceLink.style.color = "red";
+}
+if (window.location.pathname === "/aboutus/") {
+  aboutLink.style.color = "red";
+}
+if (window.location.pathname === "/contact/") {
+  contactLink.style.color = "red";
+}
+if (window.location.pathname === "/table/") {
+  bookLink.style.color = "red";
+}
+if (window.location.pathname === "/register/") {
+  registerLink.style.color = "red";
+}
+
+    </script>
+
+    <script>
+
+      
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const counters = [
     { id: 'clientCounter', target: 500 },
