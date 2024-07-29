@@ -58,85 +58,121 @@
               <td>Specialize in all types of plumbing service.]</td>
               <td>100rs/hr</td>
               <td>
+                <!-- Modal trigger button -->
                 <button
-                  id="BooknowBtn"
-                  class="btn btn-dark mt-1"
-                  onclick="toggleContent()"
+                  type="button"
+                  class="btn btn-dark btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalId"
                 >
-                  Book now
+                  Book
                 </button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>John</td>
-              <td>
-                <a
-                  href="{% static './home/img/teamleader.jpg' %}"
-                  target="_blank"
-                  ><img
-                    src="{% static './home/img/teamleader.jpg' %}"
-                    alt=""
-                    width="100px"
-                    height="50px"
-                /></a>
-              </td>
-              <td>Plumber</td>
-              <td>2years</td>
-              <td>Specialize in all types of plumbing service.</td>
-              <td>100rs/hr</td>
-              <td>
-                <button
-                  id="BooknowBtn"
-                  class="btn btn-dark mt-1"
-                  onclick="toggleContent()"
+
+                <!-- Modal Body -->
+                <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+                <div
+                  class="modal fade"
+                  id="modalId"
+                  tabindex="-1"
+                  data-bs-backdrop="static"
+                  data-bs-keyboard="false"
+                  role="dialog"
+                  aria-labelledby="modalTitleId"
+                  aria-hidden="true"
                 >
-                  Book now
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>John</td>
-              <td>
-                <a href="./img/blub.jpg" target="_blank"
-                  ><img src="./img/blub.jpg" alt="" width="100px" height="50px"
-                /></a>
-              </td>
-              <td>Plumber</td>
-              <td>2years</td>
-              <td>Specialize in all types of plumbing service.</td>
-              <td>100rs/hr</td>
-              <td>
-                <button
-                  id="BooknowBtn"
-                  class="btn btn-dark mt-1"
-                  onclick="toggleContent()"
-                >
-                  See More
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>John</td>
-              <td>
-                <a href="./img/blub.jpg" target="_blank"
-                  ><img src="./img/blub.jpg" alt="" width="100px" height="50px"
-                /></a>
-              </td>
-              <td>Plumber</td>
-              <td>2years</td>
-              <td>Specialize in all types of plumbing service.</td>
-              <td>100rs/hr</td>
-              <td>
-                <button
-                  id="BooknowBtn"
-                  class="btn btn-dark mt-1"
-                  onclick="toggleContent()"
-                >
-                  Book now
-                </button>
+                  <div
+                    class="modal-dialog modal-dialog-scrollable modal-md"
+                    role="document"
+                  >
+                    <div class="modal-content">
+                      <div class="modal-header ">
+                        <h5 class="modal-title " id="modalTitleId">
+                         Book now
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="row g-3 needs-validation" novalidate>
+                          <div class="col-md-12">
+                            <label for="validationCustom01" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="" required>
+                          </div>
+                          <div class="col-md-12">
+                            <label for="validationCustom01" class="form-label">Mobile</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="" required>
+                          </div>
+                          <div class="col-md-12">
+                            <label for="validationCustom01" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="" required>
+                          </div>
+                          <div class="col-md-12">
+                            <label for="date">Booking Date:</label>
+                            <input type="date" id="date" name="date" required>                     
+                          </div>
+                          <div class="mb-3">
+                            <label for="" class="form-label">Day</label>
+                            <select
+                              class="form-select form-select-sm"
+                              name=""
+                              id=""
+                            >
+                              <option selected>Select Days</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="1">4</option>
+                              <option value="2">5</option>
+                              <option value="3">6</option>
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                            <label for="" class="form-label">Hours</label>
+                            <select
+                              class="form-select form-select-sm"
+                              name=""
+                              id=""
+                            >
+                              <option selected>Select Hours</option>
+                              <option value="1">1-2hr</option>
+                              <option value="2">2-3hr</option>
+                              <option value="3">3-4hr</option>
+                            </select>
+                          </div>
+                          
+                          {% comment %} <div class="col-12">
+                            <button class="btn btn-primary" type="submit"data-bs-dismiss="modal">cancle</button>
+                            <button class="btn btn-primary" type="submit" data-bs-dismiss="modal">Submit</button>
+                          </div> {% endcomment %}
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button type="button" data-bs-dismiss="modal" class="btn btn-dark">
+                          Save
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Optional: Place to the bottom of scripts -->
+                <script>
+                  const myModal = new bootstrap.Modal(
+                    document.getElementById("modalId"),
+                    options
+                  );
+                </script>
               </td>
             </tr>
           </tbody>
