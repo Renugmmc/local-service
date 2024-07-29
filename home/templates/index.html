@@ -13,11 +13,6 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
-    
-    <script
-      src="https://kit.fontawesome.com/5a37ddd603.js"
-      crossorigin="anonymous"
-    ></script>
 
     <title>Title</title>
     <style>
@@ -29,10 +24,6 @@
       .text-center .logo {
         display: flex;
       }
-
-
-
-        /* #carousel images */
       .carousel-item img {
         height: calc(100vh - 120px);
         object-fit: cover; 
@@ -58,6 +49,8 @@
         text-align: center;
         color: rgb(33, 30, 30);
       }
+
+ 
 
       .courses-and-training-section .courses-and-training-card-div {
         display: flex;
@@ -524,21 +517,14 @@
             <div class="card__content">
               <span><i class="ri-double-quotes-l"></i></span>
               <div class="card__details">
-                <p style="color: white;">
+                <p>
                   We had a great time collaboraring with the Filament team. They
                   have my high recommendation!
                 </p>
-                <div class="star my-2 text-end">
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4 class="name my-2"style="color: white;">- Marnus Stephen</h4>
+                <h4>- Marnus Stephen</h4>
+              </div>
             </div>
           </div>
-        </div>
           <div class="card7">
             <img
               src="{% static './home/img/pic-2.jpeg' %}"
@@ -548,21 +534,14 @@
             <div class="card__content">
               <span><i class="ri-double-quotes-l"></i></span>
               <div class="card__details">
-                <p style="color: white;">
-                  The team drastically improved our product's user experience and
+                <p>
+                  The team drastically improved our product's user experience &
                   increased our business outreach.
                 </p>
-                <div class="star my-2 text-end">
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4 class="name my-2"style="color: white;">-Susmita shrestha</h4>
+                <h4>- Andrew Jettpace</h4>
+              </div>
             </div>
           </div>
-        </div>
           <div class="card7">
             <img
               src="{% static './home/img/pic-3.jpg' %}"
@@ -572,19 +551,12 @@
             <div class="card__content">
               <span><i class="ri-double-quotes-l"></i></span>
               <div class="card__details">
-                <p style="color: white;">
+                <p>
                   I absolutely loved working with the Filament team. Complete
                   experts at what they do!
                 </p>
-                <div class="star my-2 text-end">
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4 class="name my-2"style="color: white;">- Bipana baral</h4>
-            </div>
+                <h4>- Stacy Stone</h4>
+              </div>
             </div>
           </div>
         </div>
@@ -648,9 +620,45 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
-    {% comment %} <script src="{%static "./home/js/script.js"%}"></script> {% endcomment %}
+    <script src="https://temp.staticsave.com/66954130320ea.css"></script> 
+
     <script>
-      // script.js
+      const serviceLink = document.getElementById("serviceId");
+const homeLink = document.getElementById("homeId");
+const aboutLink = document.getElementById("aboutId");
+const contactLink = document.getElementById("contactId");
+const bookLink = document.getElementById("bookId");
+const registerLink = document.getElementById("registerId");
+
+console.log(serviceLink);
+
+if (window.location.pathname === "/") {
+  homeLink.style.color = "red";
+}
+if (window.location.pathname === "/service/") {
+  serviceLink.style.color = "red";
+}
+if (window.location.pathname === "/aboutus/") {
+  aboutLink.style.color = "red";
+}
+if (window.location.pathname === "/contact/") {
+  contactLink.style.color = "red";
+}
+if (window.location.pathname === "/table/") {
+  bookLink.style.color = "red";
+}
+if (window.location.pathname === "/register/") {
+  registerLink.style.color = "red";
+}
+
+    </script>
+
+    <script>
+
+      
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const counters = [
     { id: 'clientCounter', target: 500 },
